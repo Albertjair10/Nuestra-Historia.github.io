@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mensaje.css">
+    <title>Mensajes aleatorios</title>
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+    <header>
+
+        <h1>MI WAWITA</h1><br>
+
+        <a href="index.html" class="btn-volver">
+            inicio
+        </a>
+
+    </header>
+
+    <section class="sorpresa">
+
+    <h2>💌 Mensajes para mi Wawita</h2>
+
+    <button onclick="mostrarFrase()">
+        ✨ Mostrar Mensaje
+    </button>
+
+    <div id="frase">
+        Presiona el botón para ver una sorpresa
+    </div>
+
+    <script>
+
+const frases = [
+
+"❤️ Gracias por llegar a mi vida.",
+"🌹 Eres una de las mejores cosas que me han pasado.",
+"✨ Mi día siempre mejora cuando hablo contigo.",
+"💖 Tu sonrisa tiene algo mágico.",
+"🥰 Me encanta compartir mi tiempo contigo.",
+"🌙 Mi lugar favorito siempre será a tu lado.",
+"⭐ Mi estrellita favorita.",
+"💕 Mi wawita hermosa.",
+"🌷 Gracias por ser tú.",
+"❤️ Eres mi persona favorita.",
+
+"🌹 Tus ojitos son de mis cosas favoritas.",
+"✨ Siempre encuentro tranquilidad cuando hablo contigo.",
+"💖 Gracias por cada momento compartido.",
+"🥰 Amo nuestras conversaciones.",
+"🌙 Pienso en ti más veces de las que imaginas.",
+"⭐ Nunca dejes de brillar, estrellita.",
+"💕 Gracias por cada sonrisa.",
+"🌷 Eres una persona maravillosa.",
+"❤️ Me haces feliz.",
+"🌹 Gracias por existir.",
+
+"✨ Eres una bendición en mi vida.",
+"💖 Admiro tu forma de ser.",
+"🥰 Gracias por confiar en mí.",
+"🌙 Me encanta escuchar tu voz.",
+"⭐ Tu felicidad también es importante para mí.",
+"💕 Siempre tendrás un lugar especial en mi corazón.",
+"🌷 Gracias por cada recuerdo.",
+"❤️ Tu compañía significa mucho para mí.",
+"🌹 Siempre creeré en ti.",
+"✨ Nunca olvides lo valiosa que eres.",
+
+"💖 Me encanta cómo iluminas mis días.",
+"🥰 Eres alguien muy especial para mí.",
+"🌙 Gracias por cada conversación.",
+"⭐ Tu sonrisa puede alegrar cualquier día.",
+"💕 Wawita, eres increíble.",
+"🌷 Gracias por quedarte.",
+"❤️ Me siento afortunado de tenerte.",
+"🌹 Eres una razón constante para sonreír.",
+"✨ Tu presencia hace mis días mejores.",
+"💖 Gracias por cada detalle.",
+
+"🥰 Amo la forma en que eres.",
+"🌙 Eres una historia que nunca me cansaré de leer.",
+"⭐ Mi pequeña estrellita hermosa.",
+"💕 Siempre disfruto hablar contigo.",
+"🌷 Tu ternura es algo que adoro.",
+"❤️ Gracias por acompañarme.",
+"🌹 Siempre recordaré nuestros momentos juntos.",
+"✨ Eres una persona única.",
+"💖 Nunca dejaré de admirarte.",
+"🥰 Gracias por cada instante compartido.",
+
+"🌙 Me encanta crear recuerdos contigo.",
+"⭐ Eres una luz en mis días.",
+"💕 Gracias por hacerme sentir especial.",
+"🌷 Tu forma de reír es contagiosa.",
+"❤️ Siempre habrá razones para sonreír contigo.",
+"🌹 Gracias por cada abrazo.",
+"✨ Eres mucho más especial de lo que imaginas.",
+"💖 Amo cómo haces que todo parezca más bonito.",
+"🥰 Gracias por cada palabra bonita.",
+"🌙 Mi corazón sonríe cuando piensa en ti.",
+
+"⭐ Siempre serás mi estrellita.",
+"💕 Gracias por formar parte de mi vida.",
+"🌷 Me encanta verte feliz.",
+"❤️ Tu felicidad me importa.",
+"🌹 Gracias por todos los recuerdos que hemos creado.",
+"✨ Cada día encuentro una nueva razón para quererte.",
+"💖 Eres alguien que jamás quiero perder.",
+"🥰 Amo cada momento que paso contigo.",
+"🌙 Gracias por hacer especiales los días comunes.",
+"⭐ Eres mi estrella favorita.",
+
+"💕 Mi wawita querida.",
+"🌷 Gracias por tu cariño.",
+"❤️ Siempre estaré orgulloso de ti.",
+"🌹 Tu presencia es un regalo.",
+"✨ Gracias por todo lo que me has enseñado.",
+"💖 Tu corazón es hermoso.",
+"🥰 Eres una persona admirable.",
+"🌙 Gracias por estar en mi vida.",
+"⭐ Nunca dejes de soñar.",
+"💕 Siempre habrá algo que amar de ti.",
+
+"🌷 Gracias por cada sonrisa que me regalas.",
+"❤️ Me encanta compartir mis días contigo.",
+"🌹 Eres alguien inolvidable.",
+"✨ Tu bondad inspira.",
+"💖 Gracias por ser tan especial.",
+"🥰 Siempre me gusta pensar en nuestro futuro.",
+"🌙 Tu compañía vale mucho para mí.",
+"⭐ Gracias por iluminar mis días.",
+"💕 Amo cada recuerdo contigo.",
+"🌷 Gracias por ser mi compañera.",
+
+"❤️ Siempre elegiría volver a conocerte.",
+"🌹 Gracias por cada momento vivido.",
+"✨ Eres una de mis mayores alegrías.",
+"💖 Tu sonrisa merece durar para siempre.",
+"🥰 Gracias por existir, wawita.",
+"🌙 Eres mi pensamiento favorito.",
+"⭐ Estrellita, sigue brillando siempre.",
+"💕 Gracias por hacer mi vida más bonita.",
+"🌷 Lo mejor de nuestra historia es que seguimos escribiéndola.",
+"❤️ Te amo muchísimo."
+];
+
+
+/* ... aquí continúan todas las frases ... */
+
+"❤️ Te quiero muchísimo, wawita."
+
+
+function mostrarFrase(){
+
+    const indice =
+    Math.floor(
+        Math.random() * frases.length
+    );
+
+    document.getElementById("frase")
+    .innerHTML = frases[indice];
+
+}
+
+</script>
+
+</section>
+</body>
+</html>

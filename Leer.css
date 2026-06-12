@@ -1,0 +1,243 @@
+/* ==========================
+   RESET GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:70px 20px 40px;
+
+    background:linear-gradient(
+        135deg,
+        #ff4d88,
+        #ff7aa8
+    );
+
+}
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:10%;
+
+    width:80%;
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,.25),
+        transparent
+    );
+}
+
+header h1{
+
+    color:white;
+
+    font-size:3.5rem;
+
+    font-family:'Playfair Display',serif;
+}
+
+header p{
+
+    color:white;
+
+    margin-top:10px;
+
+    margin-bottom:25px;
+
+    font-size:1.1rem;
+}
+
+/* ==========================
+   BOTÓN VOLVER
+========================== */
+
+.btn-volver{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:1.1rem;
+
+    color:#ff4d88;
+
+    background:white;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    border:2px solid #ff4d88;
+
+    transition:.3s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+}
+
+.btn-volver:hover{
+
+    background:#ff4d88;
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+
+.contenedor{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+    gap:30px;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.tarjeta{
+
+    text-decoration:none;
+
+    background:white;
+
+    color:#333;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+    transition:.4s ease;
+}
+
+/* Franja lateral estilo página */
+
+.tarjeta::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:8px;
+    height:100%;
+
+    background:#ff4d88;
+}
+
+/* Hover */
+
+.tarjeta:hover{
+
+    transform:
+    translateY(-10px)
+    rotate(-1deg);
+
+    box-shadow:
+    0 20px 40px rgba(255,77,136,0.20);
+}
+
+/* ==========================
+   TÍTULOS TARJETA
+========================== */
+
+.tarjeta h2{
+
+    color:#ff4d88;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:1.7rem;
+
+    margin-bottom:15px;
+}
+
+/* ==========================
+   TEXTO TARJETA
+========================== */
+
+.tarjeta p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:1rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    .contenedor{
+        width:95%;
+        gap:20px;
+    }
+
+    .tarjeta{
+        padding:25px;
+    }
+
+    .tarjeta h2{
+        font-size:1.4rem;
+    }
+
+}

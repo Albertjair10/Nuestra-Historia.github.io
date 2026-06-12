@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros recuerdos</title>
+    <link rel="stylesheet" href="Index.css">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>ALBERT X VALENTINA</h1>
+        <p>Un pequeño espacio para guardar nuestros recuerdos</p>
+    </header>
+
+    <main>
+
+        <div class="contenedor">
+
+            <a href="Historia.html" class="tarjeta">
+                <h2>Nuestra historia</h2>
+            </a>
+
+            <a href="Album.html" class="tarjeta">
+                <h2>Álbum de fotos</h2>
+            </a>
+
+            <a href="Tiempo.html" class="tarjeta">
+                <h2>Contador de tiempo</h2>
+            </a>
+
+            <a href="Playlist.html" class="tarjeta">
+                <h2>Nuestra playlist</h2>
+            </a>
+
+            <a href="Mensaje.html" class="tarjeta">
+                <h2>Mensajes sorpresas</h2>
+            </a>
+
+            <a href="Leer.html" class="tarjeta">
+                <h2>Para leer cuando</h2>
+            </a>
+
+        </div>
+
+
+    </main>
+
+    <div class="player">
+
+        <div class="song-info">
+            Me Cambiaste la Vida - Rio roma
+        </div>
+
+        <button id="playBtn">▶</button>
+
+        <audio id="musica">
+            <source src="music/me-cambiaste-la-vida.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <script>
+        const playBtn = document.getElementById("playBtn");
+        const musica = document.getElementById("musica");
+
+        playBtn.addEventListener("click", () => {
+
+            if(musica.paused){
+                musica.play();
+                playBtn.textContent = "⏸";
+            }else{
+                musica.pause();
+                playBtn.textContent = "▶";
+            }
+
+        });
+    </script>
+
+</body>
+</html>

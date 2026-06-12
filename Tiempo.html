@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Juntos ❤️</title>
+
+    <link rel="stylesheet" href="Tiempo.css">
+<meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+
+        <h1>Tiempo juntos</h1>
+
+        <p>
+            Cada segundo contigo ha valido la pena
+        </p>
+
+        <a href="Index.html" class="btn-volver">
+            inicio
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="contador-card">
+
+            <h2>Desde el 31 de Octubre de 2024 (3:54pm)</h2>
+
+            <div id="contador">
+
+                <div class="unidad">
+                    <span id="dias">0</span>
+                    <small>Días</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="horas">0</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="minutos">0</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="unidad">
+                    <span id="segundos">0</span>
+                    <small>Segundos</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const fechaInicio =
+        new Date("2024-10-31T15:54:00");
+
+        function actualizarContador(){
+
+            const ahora = new Date();
+
+            const diferencia =
+            ahora - fechaInicio;
+
+            const totalSegundos =
+            Math.floor(diferencia / 1000);
+
+            const dias =
+            Math.floor(totalSegundos / 86400);
+
+            const horas =
+            Math.floor(
+                (totalSegundos % 86400) / 3600
+            );
+
+            const minutos =
+            Math.floor(
+                (totalSegundos % 3600) / 60
+            );
+
+            const segundos =
+            totalSegundos % 60;
+
+            document.getElementById("dias")
+            .textContent = dias;
+
+            document.getElementById("horas")
+            .textContent = horas;
+
+            document.getElementById("minutos")
+            .textContent = minutos;
+
+            document.getElementById("segundos")
+            .textContent = segundos;
+
+        }
+
+        setInterval(
+            actualizarContador,
+            1000
+        );
+
+        actualizarContador();
+
+    </script>
+
+</body>
+</html>
