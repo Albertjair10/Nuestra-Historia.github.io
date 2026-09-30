@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Cuenta Regresiva & Mensajes Diarios</title>
+    <!-- Google Fonts para Playfair Display y Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="sorpresa2.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nuestra Historia</h1>
+        <p>Cuenta regresiva y sorpresas hacia nuestro 2do Aniversario</p>
+        <a href="#" class="btn-volver" onclick="location.reload();">Actualizar Sorpresa</a>
+        <div class="volver-contenedor">
+    <a href="index.html" class="btn-volver">inicio</a>
+</div>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- SECCIÓN INTERACTIVA: CUENTA REGRESIVA Y MENSAJE DIARIO -->
+        <div class="tarjeta seccion-interactiva">
+            <h2>✨ Camino al 1 de Noviembre ✨</h2>
+            <p>Cada día más cerca de celebrar nuestros 2 años juntos.</p>
+            
+            <div class="contador-box" id="contador">
+                <div class="tiempo-item">
+                    <span id="dias">00</span>
+                    <small>Días</small>
+                </div>
+                <div class="tiempo-item">
+                    <span id="horas">00</span>
+                    <small>Horas</small>
+                </div>
+                <div class="tiempo-item">
+                    <span id="minutos">00</span>
+                    <small>Minutos</small>
+                </div>
+                <div class="tiempo-item">
+                    <span id="segundos">00</span>
+                    <small>Segundos</small>
+                </div>
+            </div>
+
+            <div class="mensaje-dia-card">
+                <h3 id="titulo-mensaje">Mensaje de Hoy</h3>
+                <p id="texto-mensaje">Cargando la sorpresa de hoy...</p>
+            </div>
+        </div>
+
+        <!-- TARJETA 1 -->
+        <a href="#" class="tarjeta">
+            <h2>Nuestros Momentos</h2>
+            <p>dedicado a recordar todas las risas, ocurrencias y momentos hermosos que hemos construido paso a paso desde el primer día.</p>
+        </a>
+
+        <!-- TARJETA 2 -->
+        <a href="#" class="tarjeta">
+            <h2>Metas y Sueños</h2>
+            <p>Todo lo que estamos logrando con esfuerzo y constancia para construir nuestro futuro juntos.</p>
+        </a>
+
+        <!-- TARJETA 3 -->
+        <a href="#" class="tarjeta">
+            <h2>Promesas de Amor</h2>
+            <p>El recordatorio constante de cuidarnos, crecer juntos y mantener la llama que nos hace únicos.</p>
+        </a>
+
+    </main>
+
+    <script>
+        // Mensajes diarios programados del 1 al 31 de octubre de 2026
+        const mensajesOctubre = {
+ 1: "Me encanta comenzar este mes pensando en todo lo bonito que hemos vivido. Y si tuviera que elegir un solo deseo para octubre, sería seguir escribiendo nuestra historia juntos.",
+
+  2: "Entre risas, nervios, miradas y jugando Roblox comenzó algo que jamás imaginé que llegaría ser tan hermoso. Qué bonita casualidad haberte conocido.",
+
+  3: "Cada día descubro algo nuevo que admirar de ti: tu inteligencia, tu forma de pensar y esas ganas que le pones a todo. Eres increíble, mi amor.",
+
+  4: "A veces pienso en todas nuestras pequeñas cosas: nuestras bromas, nuestras conversaciones y hasta el silencio que disfrutamos juntos.",
+
+  5: "Me haces feliz de una manera que quizá nunca voy a saber explicar completamente. Gracias por convertir momentos normales en recuerdos especiales.",
+
+  6: "Benedico la coincidenza che ha fatto incrociare i nostri cammini.",
+
+  7: "Ve con tu bb, hoy toca una rica salchipapa (si no le haces acordar no vale)",
+
+  8: "A tu lado aprendí que amar también significa acompañarnos, apoyarnos y celebrar cada pequeño logro del otro.",
+
+  9: "Si pudiera volver al día en que nos conocimos, haría exactamente lo mismo: volvería a hablarte, volvería a reír contigo y volvería a elegirte.",
+
+  10: "Tengo muchísimo orgullo de ti. Por todo lo que estás consiguiendo, por lo que estás aprendiendo y por la persona en la que te estás convirtiendo.",
+
+  11: "Estamos cada vez más cerca de nuestra fecha especial. Y mientras pasan los días, me doy cuenta de que todavía me emociona pensar en todo lo que nos queda por vivir.",
+
+  12: "La pista de hoy es sencilla: ¿quien es la bb más linda y tierna de la existencia?.",
+
+  13: "Amo esa sonrisa tuya que puede cambiar completamente mi día.",
+
+  14: "MI TIKITITA PRECHIOCHA HOY TOCA UNA EMPANADAAAA (si no haces acordar no vale 🙂‍↔️)",
+
+  15: "Imaginar que ya estamos a mitad del mes me emociona. Dentro de poquito podremos decir que llevamos 2 años construyendo nuestra historia.",
+
+  16: "Descansa cuando lo necesites, toma agüita y recuerda que hay alguien que te adora muchísimo y que siempre quiere verte bien. ❤️",
+
+  17: "piensa en aquel lugar donde tuvimos uno de nuestros primeros momentos especiales.",
+
+  18: "Hay recuerdos que parecen pequeños, pero con el tiempo se vuelven gigantes. Y yo tengo muchísimos de esos contigo.",
+
+  19: "Me encanta pensar que no solo hemos compartido momentos felices, sino también días difíciles en los que aprendimos a estar el uno para el otro.",
+
+  20: "sinceramente me quedo sin imaginación a veces pero jamas me cansare de decirte q te amo con mi vida mi amor",
+
+  21: "Eres mi compañera de aventuras, mi cómplice y esa persona con la que puedo ser completamente yo.",
+
+  22: "La próxima vez que nos veamos, prepárate para uno de esos abrazos que dicen todo lo que a veces las palabras no pueden.",
+
+  23: "Gracias por cada conversación, cada risa, cada abrazo y cada momento en el que simplemente estuvimos juntos.",
+
+  24: "Hoy quiero que recuerdes algo: te amo por quien eres, por quien has sido y por todo lo que todavía vamos a descubrir juntos.",
+
+  25: "HOY Q SE TE ANTOJA AMOR? (dime lo q quierash)",
+
+  26: "Haz una pausa y mírate como yo te miro: eres hermosa, pero lo que más amo es todo lo que llevas dentro.",
+
+  27: "A pocos días del aniversario, solo puedo pensar en aquella primera etapa de nosotros y el crecimiento de nuestra relacion",
+
+  28: "Si nuestra historia fuera una canción, tendría risas, momentos difíciles, abrazos, aventuras, discusiones, reconciliaciones y muchísimos 'te amo'.",
+
+  29: "Ya casi llega nuestro día. Y si pudiera elegir dónde estar, sería exactamente donde estoy cuando estoy contigo: a tu lado.",
+
+  30: "mañana empieza la cuenta regresiva de otro capítulo de nuestra historia.",
+
+  31: "HOY TOCA MIRAR EL RELOJ Q YA FALTAN HORAS PARA NUESTRO ANIVERSARIO",
+    
+  32: "Hoy cumplimos 2 años. Y después de todos estos días, quiero que vuelvas a leer las primeras letras de los mensajes del 1 al 17.\n\nME CAMBIASTE LA VIDA ❤️\n\nPorque eso es exactamente lo que hiciste.\n\nLlegaste sin avisar,\nte quedaste sin prometerlo,\ny terminaste convirtiéndote\nen una de las partes más bonitas de mi vida.\n\nY si nuestra historia fuera una canción,\nyo no cambiaría ninguna estrofa,\nporque cada risa, cada abrazo,\ncada aventura y cada momento contigo\nforma parte de mi canción favorita.\n\nTú.\nMi casualidad favorita.\nMi compañera.\nMi cómplice.\nMi amor.\n\nY si pudiera volver al principio,\nte volvería a elegir una y otra vez.\n\nFelices 2 años, wawita. ❤️\nTe amo muchísimo."
+        };
+
+        function actualizarPagina() {
+            const fechaAniversario = new Date("November 1, 2026 00:00:00").getTime();
+            const ahora = new Date().getTime();
+            const diferencia = fechaAniversario - ahora;
+
+            if (diferencia > 0) {
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+                document.getElementById("dias").innerText = String(dias).padStart(2, '0');
+                document.getElementById("horas").innerText = String(horas).padStart(2, '0');
+                document.getElementById("minutos").innerText = String(minutos).padStart(2, '0');
+                document.getElementById("segundos").innerText = String(segundos).padStart(2, '0');
+            } else {
+                document.getElementById("contador").innerHTML = "<h3 style='color:#ff4d88; width:100%; font-family:Playfair Display;'>¡Felices 2 Años, mi amor! 🎉❤️</h3>";
+            }
+
+            const fechaActual = new Date();
+            const mes = fechaActual.getMonth() + 1;
+            const dia = fechaActual.getDate();
+
+            const tituloMensaje = document.getElementById("titulo-mensaje");
+            const textoMensaje = document.getElementById("texto-mensaje");
+
+            if (mes === 10 && mensajesOctubre[dia]) {
+                tituloMensaje.innerText = `Mensaje para el ${dia} de Octubre`;
+                textoMensaje.innerText = `"${mensajesOctubre[dia]}"`;
+            } else if (mes > 10 || (mes === 10 && dia > 31)) {
+                tituloMensaje.innerText = "¡Feliz Aniversario!";
+                textoMensaje.innerText = "\"Ya cumplimos nuestros hermosos 2 años juntos. Gracias por tanto amor.\"";
+            } else {
+                tituloMensaje.innerText = "Preparando la cuenta regresiva";
+                textoMensaje.innerText = "\"Octubre está a punto de empezar para recordarnos lo mucho que hemos construido.\"";
+            }
+        }
+
+        setInterval(actualizarPagina, 1000);
+        actualizarPagina();
+    </script>
+</body>
+</html>
